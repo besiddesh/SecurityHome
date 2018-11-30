@@ -11,6 +11,8 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { PrivadoComponent } from './componentes/privado/privado.component';
 import { NotFoundComponent } from './componentes/not-found/not-found.component';
 
+import {FlashMessagesModule} from 'angular2-flash-messages';
+import {FlashMessagesService} from 'angular2-flash-messages';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 
@@ -34,9 +36,10 @@ import {AuthGuard} from './guards/auth.guard';
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    FlashMessagesModule
     
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard,FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../../servicios/auth.service';
 import {Router} from '@angular/router';
+import {FlashMessagesService} from 'angular2-flash-messages';
 
 
 @Component({
@@ -14,7 +15,8 @@ export class RegistroComponent implements OnInit {
 
   constructor(
   public  authService: AuthService,
-  public router: Router
+  public router: Router,
+  public flashMensaje: FlashMessagesService
   ) { }
     
   ngOnInit() {
@@ -22,6 +24,9 @@ export class RegistroComponent implements OnInit {
 onSubmitAddUser(){
   this.authService.registerUser(this.email, this.password)
   .then((res)=>{
+    this.flashMensaje.show('Usuario Creado Con Exito',
+    {cssClass: 'alert-success', timeout:4000}
+    );
     this.router.navigate(['/privado']);
   }).catch((err)=>{
     console.log(err);
