@@ -29,6 +29,8 @@ onSubmitAddUser(){
     );
     this.router.navigate(['/privado']);
   }).catch((err)=>{
+    this.flashMensaje.show(err.message ,
+    {cssClass: 'alert-danger', timeout:4000});
     console.log(err);
   });
 }
