@@ -6,11 +6,14 @@ import {RegistroComponent} from './componentes/registro/registro.component';
 import {PrivadoComponent} from './componentes/privado/privado.component';
 import {NotFoundComponent} from './componentes/not-found/not-found.component';
 
+import {AuthGuard} from './guards/auth.guard';
+import { CanActivate } from '@angular/router/src/utils/preactivation';
+
 const routes: Routes = [
   {path: '',component:HomePageComponent},
   {path: 'login',component: LoginComponent},
   {path: 'Registro',component:RegistroComponent},
-  {path: 'privado',component: PrivadoComponent},
+  {path: 'privado',component: PrivadoComponent, canActivate: [AuthGuard]},
   {path: '**',component: NotFoundComponent}
 ];
 
