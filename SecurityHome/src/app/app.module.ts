@@ -19,6 +19,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {environment} from '../environments/environment';
 import {AuthService} from './servicios/auth.service';
 import {AuthGuard} from './guards/auth.guard';
+import { VecindariosComponent } from './componentes/vecindarios/vecindarios.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {AuthGuard} from './guards/auth.guard';
     LoginComponent,
     RegistroComponent,
     PrivadoComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    VecindariosComponent
   ],
   imports: [
     BrowserModule,
