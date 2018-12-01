@@ -22,10 +22,22 @@
       <li class="nav-item" *ngIf="!isLogin">
         <a class="nav-link" routerLink="/Registro">Registro</a>
       </li>
-      
-      <li class="nav-item" *ngIf="isLogin">
-        <a class="nav-link" href="#" (click)="onClickLogout()">Cerrar Sesión</a>
+    
+      <li class="nav-item">
+          <a class="nav-link">{{nombreUsuario}}</a>
       </li>
+
+      <li class="nav-item" *ngIf="isLogin">
+          <a class="nav-link" href="#" (click)="onClickLogout()">Cerrar Sesión</a>
+        </li>
+        
+      <li class="nav-item" *ngIf="isLogin">
+        <img src="{{fotoUsuario}}" class="rounded-circle">
+      </li>
+
+      
+
     </ul>
   </div>
 </nav>
+<!--<span class="badge pill badge-secondary">{{emailUsuario}}</span>-->
