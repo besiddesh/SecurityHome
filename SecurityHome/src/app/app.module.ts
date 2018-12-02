@@ -22,6 +22,10 @@ import {AuthGuard} from './guards/auth.guard';
 import { VecindariosComponent } from './componentes/vecindarios/vecindarios.component';
 import { MiperfilComponent } from './componentes/miperfil/miperfil.component';
 import {AngularFireStorageModule} from '@angular/fire/storage';
+import { EmergenciasComponent } from './componentes/emergencias/emergencias.component';
+import { IncendioComponent } from './componentes/incendio/incendio.component';
+import { SaludComponent } from './componentes/salud/salud.component';
+import { RoboComponent } from './componentes/robo/robo.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
     PrivadoComponent,
     NotFoundComponent,
     VecindariosComponent,
-    MiperfilComponent
+    MiperfilComponent,
+    EmergenciasComponent,
+    IncendioComponent,
+    SaludComponent,
+    RoboComponent
   ],
   imports: [
     BrowserModule,
