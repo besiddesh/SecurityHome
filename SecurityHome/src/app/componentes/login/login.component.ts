@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       .then((res)=>{
         this.flashMensaje.show('Usuario Logeado Con Exito',
         {cssClass: 'alert-success', timeout:4000});
-      this.router.navigate(['/privado']);
+      this.router.navigate(['/miperfil']);
       }).catch((err)=>{
         this.flashMensaje.show(err.message ,
         {cssClass: 'alert-danger', timeout:4000});

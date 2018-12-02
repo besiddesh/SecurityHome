@@ -20,6 +20,8 @@ import {environment} from '../environments/environment';
 import {AuthService} from './servicios/auth.service';
 import {AuthGuard} from './guards/auth.guard';
 import { VecindariosComponent } from './componentes/vecindarios/vecindarios.component';
+import { MiperfilComponent } from './componentes/miperfil/miperfil.component';
+import {AngularFireStorageModule} from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { VecindariosComponent } from './componentes/vecindarios/vecindarios.comp
     RegistroComponent,
     PrivadoComponent,
     NotFoundComponent,
-    VecindariosComponent
+    VecindariosComponent,
+    MiperfilComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { VecindariosComponent } from './componentes/vecindarios/vecindarios.comp
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    FlashMessagesModule
+    FlashMessagesModule,
+    AngularFireStorageModule
     
   ],
   providers: [AuthService, AuthGuard,FlashMessagesService],
