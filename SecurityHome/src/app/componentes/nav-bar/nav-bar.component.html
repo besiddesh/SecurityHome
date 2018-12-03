@@ -12,30 +12,18 @@
         <li class="nav-item active" *ngIf="isLogin">
         <a class="navbar-brand" routerLink="/emergencias">Emergencias</a>
         </li>
-      <li class="nav-item active" *ngIf="!isLogin">
-        <a class="nav-link" routerLink="/login">Login</a>
-      </li>
-      
-      <li class="nav-item" *ngIf="!isLogin">
-        <a class="nav-link" routerLink="/Registro">Registro</a>
-      </li>
-      
-      <li class="nav-item" *ngIf="isLogin">
-      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-        <button type="button" class="btn btn-info"  disabled="true">
-          <img src="{{fotoUsuario}}" class="rounded-circle"></button>
-        <div class="btn-group" role="group">
-          <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-            <a class="dropdown-item" routerLink="/miperfil">Mi Perfil</a>
-            <a class="dropdown-item" href="#" (click)="onClickLogout()">Cerrar Sesión</a>
-          </div>
-        </div>
-      </div>
-    </li>
     </ul>
+      
+        <a class="nav-link" routerLink="/login" *ngIf="!isLogin" id="login">Login</a>
+      
+        <a class="nav-link" routerLink="/Registro" *ngIf="!isLogin" id="registro">Registro</a>
+      
+    
+        <button type="button"   disabled="true"*ngIf="isLogin">
+            <a routerLink="/miperfil"*ngIf="isLogin" id="login"><img src="{{fotoUsuario}}" class="rounded-circle"> </a>
+          </button>
+
+    
+            <a  href="#" (click)="onClickLogout()"*ngIf="isLogin" id="login">Cerrar Sesión</a>
   </div>
 </nav>
-
-
-<!--<span class="badge pill badge-secondary">{{emailUsuario}}</span>-->

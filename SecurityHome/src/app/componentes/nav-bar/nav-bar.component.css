@@ -2,3 +2,6 @@ img.rounded-circle{
     width: 35px;
     height: 35px;
 }
+#login,#registro{
+    color: white;
+}
