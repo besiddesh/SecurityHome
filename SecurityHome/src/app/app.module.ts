@@ -27,6 +27,7 @@ import { IncendioComponent } from './componentes/incendio/incendio.component';
 import { SaludComponent } from './componentes/salud/salud.component';
 import { RoboComponent } from './componentes/robo/robo.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,7 @@ import { RoboComponent } from './componentes/robo/robo.component';
     EmergenciasComponent,
     IncendioComponent,
     SaludComponent,
-    RoboComponent
+    RoboComponent,
   ],
   imports: [
     BrowserModule,
