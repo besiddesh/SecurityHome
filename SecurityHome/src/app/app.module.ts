@@ -14,18 +14,21 @@ import { NotFoundComponent } from './componentes/not-found/not-found.component';
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import {FlashMessagesService} from 'angular2-flash-messages';
 import {AngularFireModule} from 'angularfire2';
+import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 
 import {environment} from '../environments/environment';
 import {AuthService} from './servicios/auth.service';
 import {AuthGuard} from './guards/auth.guard';
-import { VecindariosComponent } from './componentes/vecindarios/vecindarios.component';
 import { MiperfilComponent } from './componentes/miperfil/miperfil.component';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import { EmergenciasComponent } from './componentes/emergencias/emergencias.component';
 import { IncendioComponent } from './componentes/incendio/incendio.component';
 import { SaludComponent } from './componentes/salud/salud.component';
 import { RoboComponent } from './componentes/robo/robo.component';
+
+import {ChatService} from './servicios/chat.service';
+import { FchatComponent } from './componentes/fchat/fchat.component';
 
 
 @NgModule({
@@ -37,12 +40,12 @@ import { RoboComponent } from './componentes/robo/robo.component';
     RegistroComponent,
     PrivadoComponent,
     NotFoundComponent,
-    VecindariosComponent,
     MiperfilComponent,
     EmergenciasComponent,
     IncendioComponent,
     SaludComponent,
     RoboComponent,
+    FchatComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,10 +54,11 @@ import { RoboComponent } from './componentes/robo/robo.component';
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     FlashMessagesModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    AngularFirestoreModule
     
   ],
-  providers: [AuthService, AuthGuard,FlashMessagesService],
+  providers: [AuthService, AuthGuard,FlashMessagesService, ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
