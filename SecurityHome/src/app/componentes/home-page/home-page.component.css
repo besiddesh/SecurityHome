@@ -1,0 +1,15 @@
+html,
+body,
+header,
+#intro-section {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  #intro-section {
+    height: 100vh;
+  }
+}
