@@ -27,9 +27,9 @@ export class ChatService {
               //this.chats = mensajes;
           }))
   }
-  agregarMensaje( texto: string){
+  agregarMensaje( texto: string,usercu){
           let mensaje: Mensaje ={
-            nombre: 'SecurityHome',
+            nombre: usercu,
             mensaje: texto,
             fecha: new Date().getTime()
 

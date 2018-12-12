@@ -6,7 +6,7 @@
 <div class="app-mensajes" id="app-mensajes">
   
     <div class="text-right" *ngFor="let chat of _cs.chats">
-      <span class="badge badge-success">SecurityHome</span>
+      <span class="badge badge-success">{{chat.nombre}}</span>
       <p>
         {{chat.mensaje}}
       </p>
