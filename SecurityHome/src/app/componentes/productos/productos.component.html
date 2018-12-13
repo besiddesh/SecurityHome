@@ -2,23 +2,19 @@
 <table class="table table-hover">
     <thead>
       <tr>
-        <th scope="col">#</th>
         <th scope="col">Producto</th>
         <th scope="col">Nombre de Producto</th>
         <th scope="col">Características</th>
         <th scope="col">Precio</th>
-        <th scope="col"><a  style="color:white;"  class="btn btn-primary float-right mb-2" data-toggle='modal' data-target='#modalPr'>Agregar Nuevo</a></th>
       </tr>
     </thead>
     <tbody>
-        <tr class="table-primary" *ngFor="let producto of productos; index as i">
-          <td>{{i+1}}</td>
+        <tr class="table-primary" *ngFor="let producto of productos">
             <td><a href="{{producto.img}}"><img class="img-fluid" src="{{producto.img}}" width="100" height="100"></a></td>
             <th scope="row">{{producto.nombre}}</th>
             <td>{{producto.Caractertisticas}}</td>
             <td>{{producto.precio}}</td>
-            <td><a  style="color:white;"  class="btn btn-danger" (click)="onDelete(producto.id)">Eliminar</a></td>
+            <td><a routerLink="/buy/{{producto.id}}" style="color:white;"  class="btn btn-info btn-sm">Comprar</a></td>
           </tr>
         </tbody>
       </table>
-      <app-modal></app-modal>

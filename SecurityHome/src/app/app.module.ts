@@ -29,6 +29,11 @@ import { RoboComponent } from './componentes/robo/robo.component';
 
 import {ChatService} from './servicios/chat.service';
 import { FchatComponent } from './componentes/fchat/fchat.component';
+import { ProductosComponent } from './componentes/productos/productos.component';
+import {AngularFirestore} from '@angular/fire/firestore';
+import { BuyProductoComponent } from './componentes/buy-producto/buy-producto.component';
+import { ModalComponent } from './componentes/modal/modal.component';
+import { AtenderComponent } from './componentes/atender/atender.component';
 
 
 @NgModule({
@@ -46,6 +51,10 @@ import { FchatComponent } from './componentes/fchat/fchat.component';
     SaludComponent,
     RoboComponent,
     FchatComponent,
+    ProductosComponent,
+    BuyProductoComponent,
+    ModalComponent,
+    AtenderComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +67,7 @@ import { FchatComponent } from './componentes/fchat/fchat.component';
     AngularFirestoreModule
     
   ],
-  providers: [AuthService, AuthGuard,FlashMessagesService, ChatService],
+  providers: [AuthService, AuthGuard,FlashMessagesService, ChatService,AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
