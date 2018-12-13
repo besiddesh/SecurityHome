@@ -9,15 +9,14 @@
         </div>
         <div class="modal-body">
           <form name="formProd" #formProd="ngForm" (ngSubmit)="onSaveprod(formProd)">
-            <input type="text" name="ProdId" [(ngModel)]="this.dataApi.selectedProd.id">
             <div class="form-group">
               <label for="nombre">Nombre de Producto</label>
-              <input type="text" name="producto" [(ngModel)]="this.dataApi.selectedProd.nombre"  class="form-control" >
+              <input type="text" name="nombre" [(ngModel)]="this.dataApi.selectedProd.nombre"  class="form-control" >
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="Caracteristicas">Caracteristicas</label>
-                <input type="text" name="carac" [(ngModel)]="this.dataApi.selectedProd.Caractertisticas" class="form-control">
+                <input type="text" name="Caractertisticas" [(ngModel)]="this.dataApi.selectedProd.Caractertisticas" class="form-control">
               </div>
               <div class="form-group col-md-6">
                 <label for="precio">Precio</label>
@@ -26,7 +25,7 @@
             </div>
             <div class="form-group">
               <label for="portada">Imagen de producto</label>
-              <input type="text" name="portada" class="form-control" placeholder="www.imagenes.com/medicamento" [(ngModel)]="this.dataApi.selectedProd.img">
+              <input type="text" name="img" class="form-control" placeholder="www.imagenes.com/medicamento" [(ngModel)]="this.dataApi.selectedProd.img">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

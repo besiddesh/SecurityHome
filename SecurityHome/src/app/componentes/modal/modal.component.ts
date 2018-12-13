@@ -18,8 +18,9 @@ export class ModalComponent implements OnInit {
   onSaveprod(formprod: NgForm):void {
     
     console.log("IDFORM",formprod.value.id);
+    this.dataApi.addProd(formprod.value);
    /* if(formprod.value.id = null){
-      this.dataApi.addProd(formprod.value);
+      
     }
     else{
       this.dataApi.updateProd(formprod.value);
